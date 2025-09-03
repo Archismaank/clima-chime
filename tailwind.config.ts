@@ -52,6 +52,27 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Weather-themed colors
+				sunny: {
+					DEFAULT: 'hsl(var(--sunny))',
+					foreground: 'hsl(var(--sunny-foreground))'
+				},
+				cloudy: {
+					DEFAULT: 'hsl(var(--cloudy))',
+					foreground: 'hsl(var(--cloudy-foreground))'
+				},
+				rainy: {
+					DEFAULT: 'hsl(var(--rainy))',
+					foreground: 'hsl(var(--rainy-foreground))'
+				},
+				stormy: {
+					DEFAULT: 'hsl(var(--stormy))',
+					foreground: 'hsl(var(--stormy-foreground))'
+				},
+				alert: {
+					DEFAULT: 'hsl(var(--alert))',
+					foreground: 'hsl(var(--alert-foreground))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
