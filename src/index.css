@@ -1,0 +1,232 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Weather App Design System - Sky & Cloud Theme */
+
+@layer base {
+  :root {
+    /* Sky Blue Theme */
+    --background: 200 100% 97%;
+    --foreground: 215 25% 27%;
+
+    /* Sky gradient backgrounds */
+    --sky-light: 200 100% 95%;
+    --sky-medium: 210 100% 85%;
+    --sky-deep: 220 70% 60%;
+    
+    /* Cloud colors */
+    --cloud-light: 0 0% 98%;
+    --cloud-medium: 210 20% 92%;
+    --cloud-dark: 215 15% 75%;
+
+    /* Weather card system */
+    --card: 200 50% 96%;
+    --card-foreground: 215 25% 27%;
+    --card-glass: 200 100% 98%;
+
+    --popover: 200 50% 98%;
+    --popover-foreground: 215 25% 27%;
+
+    /* Primary sky blue */
+    --primary: 210 100% 56%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 210 100% 50%;
+
+    /* Secondary cloud tones */
+    --secondary: 210 25% 88%;
+    --secondary-foreground: 215 25% 27%;
+
+    /* Muted sky tones */
+    --muted: 200 30% 90%;
+    --muted-foreground: 215 15% 45%;
+
+    /* Accent weather highlights */
+    --accent: 45 100% 60%;
+    --accent-foreground: 215 25% 27%;
+
+    /* Weather alerts */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --warning: 35 95% 55%;
+    --warning-foreground: 0 0% 100%;
+
+    /* UI Elements */
+    --border: 210 30% 85%;
+    --input: 200 50% 94%;
+    --ring: 210 100% 56%;
+
+    /* Design system effects */
+    --radius: 1rem;
+    --glass-blur: blur(12px);
+    
+    /* Beautiful gradients */
+    --gradient-sky: linear-gradient(135deg, hsl(var(--sky-light)), hsl(var(--sky-medium)));
+    --gradient-weather: linear-gradient(145deg, hsl(var(--primary)) 0%, hsl(var(--sky-deep)) 100%);
+    --gradient-cloud: linear-gradient(180deg, hsl(var(--cloud-light)), hsl(var(--cloud-medium)));
+    
+    /* Weather animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Shadows */
+    --shadow-cloud: 0 8px 32px hsl(var(--sky-deep) / 0.15);
+    --shadow-weather: 0 12px 40px hsl(var(--primary) / 0.25);
+    --shadow-glass: 0 8px 32px hsl(220 70% 60% / 0.1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Sky Theme - Night Mode */
+    --background: 220 25% 8%;
+    --foreground: 200 20% 90%;
+
+    /* Dark sky gradients */
+    --sky-light: 220 30% 15%;
+    --sky-medium: 220 35% 12%;
+    --sky-deep: 220 45% 20%;
+    
+    /* Dark cloud colors */
+    --cloud-light: 220 20% 18%;
+    --cloud-medium: 220 15% 15%;
+    --cloud-dark: 220 25% 25%;
+
+    /* Dark weather cards */
+    --card: 220 25% 10%;
+    --card-foreground: 200 20% 90%;
+    --card-glass: 220 30% 12%;
+
+    --popover: 220 25% 10%;
+    --popover-foreground: 200 20% 90%;
+
+    /* Primary night sky blue */
+    --primary: 210 100% 65%;
+    --primary-foreground: 220 25% 8%;
+    --primary-hover: 210 100% 70%;
+
+    /* Secondary dark cloud tones */
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 200 20% 90%;
+
+    /* Muted dark sky tones */
+    --muted: 220 15% 15%;
+    --muted-foreground: 200 10% 65%;
+
+    /* Accent weather highlights */
+    --accent: 45 100% 65%;
+    --accent-foreground: 220 25% 8%;
+
+    /* Weather alerts - dark mode */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --warning: 35 85% 60%;
+    --warning-foreground: 220 25% 8%;
+
+    /* Dark UI Elements */
+    --border: 220 20% 20%;
+    --input: 220 25% 12%;
+    --ring: 210 100% 65%;
+
+    /* Dark gradients */
+    --gradient-sky: linear-gradient(135deg, hsl(var(--sky-medium)), hsl(var(--sky-light)));
+    --gradient-weather: linear-gradient(145deg, hsl(var(--primary)) 0%, hsl(var(--sky-deep)) 100%);
+    --gradient-cloud: linear-gradient(180deg, hsl(var(--cloud-medium)), hsl(var(--cloud-dark)));
+    
+    /* Dark shadows */
+    --shadow-cloud: 0 8px 32px hsl(220 50% 5% / 0.4);
+    --shadow-weather: 0 12px 40px hsl(var(--primary) / 0.15);
+    --shadow-glass: 0 8px 32px hsl(220 50% 5% / 0.3);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Beautiful scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted/30;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/20 rounded-lg;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/30;
+  }
+
+  /* Smooth transitions for theme switching */
+  * {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Custom gradient backgrounds */
+  .gradient-sky {
+    background: var(--gradient-sky);
+  }
+
+  .gradient-weather {
+    background: var(--gradient-weather);
+  }
+
+  .gradient-cloud {
+    background: var(--gradient-cloud);
+  }
+
+  /* Glass morphism utilities */
+  .glass-effect {
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+  }
+
+  /* Weather animation keyframes */
+  .weather-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Shimmer effect for loading states */
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--primary) / 0.1),
+      transparent
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
+  }
+}
